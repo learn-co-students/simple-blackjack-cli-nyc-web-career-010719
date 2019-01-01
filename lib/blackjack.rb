@@ -62,12 +62,12 @@ end
 
 def runner
   welcome
-  card_amt = deal_card + deal_card
-  display_card_total(card_amt)
+  card_amt = initial_round
   until card_amt > 21
-    hit?(card_amt)
-    
+    card_amt = hit?(card_amt)
+   display_card_total(card_amt)
 end
+ end_game(card_amt)
 end  
 
 
